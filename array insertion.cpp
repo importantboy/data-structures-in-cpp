@@ -30,7 +30,7 @@ int main() {
     }
 
     addelement(array, size, 5, 0);
-    addelement(array, size + 1, 100, 4);
+    addelement(array, size + 1, 100, 4); 
     addelement(array, size + 2, 30, 5);
     addelement(array, size + 3, 80, 6);
 
