@@ -1,24 +1,35 @@
-#include<iostream>
+#include <iostream>
 
 using namespace std;
 
-int main(){
-   int size;
-    cout << "enter the size of the array :";
-        cin >> size;
-         if(!size){
-             size = 5;
-         }
-  int array[size];
+int main()
+{
 
-    for(int i = 0; i < size; i++){
-          cin >> array[i];
+    int array[100] = {2, 3, 1, 7, 8};
+    int size = 5;
+
+    int pos = 2;
+    //    cout << array[size - 1];
+
+        for (int i = 0; i < size; i++)
+    {
+        cout << array[i] << " ";
     }
- cout << "array before insertion " << endl;
- for(int i: array){
-     cout << i <<" ";
- }
+  cout << endl;
+    for (int i = size - 1; i >= pos; i--)
+    {
+        
+         cout << i << " " << endl;
+        array[i + 1] = array[i];
+    }
 
- cout << "array after insertion :" << endl;
+      array[pos] = 10;
+    
+   size++;
+    for (int i = 0; i < size; i++)
+    {
+        cout << array[i] << " ";
+    }
+
     return 0;
 }
