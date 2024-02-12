@@ -7,17 +7,17 @@ void addelement(int array[], int size, int number, int index);
 
 void printarray(int array[], int size) {
     cout << endl;
-    for (int i = 0; i < size + 1; i++) {
+    for (int i = 0; i < size; i++) {
         cout << array[i] << " ";
     }
 }
+
 
 void addelement(int array[], int size, int number, int index) {
     for (int i = size - 1; i >= index; i--) {
         array[i + 1] = array[i];
     }
-    array[index] = number;
-    printarray(array, size );
+    array[index] = number;   
 }
 
 int main() {
@@ -30,9 +30,10 @@ int main() {
     }
 
     addelement(array, size, 5, 0);
-    addelement(array, size + 1, 100, 4);
-    addelement(array, size + 2, 30, 5);
-    addelement(array, size + 3, 80, 6);
-
+    addelement(array, size , 100, 4);
+    addelement(array, size , 30, 5);
+    addelement(array, size , 80, 6);
+     size+=1;
+      printarray(array , size);
     return 0;
 }
