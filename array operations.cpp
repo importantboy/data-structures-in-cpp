@@ -16,7 +16,7 @@ int main()
         cout << array[i] << " ";
     }
   cout << endl;
-    for (int i = size - 1; i >= pos; i--)
+    for (int i = size - 1; i > pos - 1; i--)
     {
         
          cout << i << " " << endl;
