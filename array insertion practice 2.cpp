@@ -21,7 +21,7 @@ int insertelement(int array[] , int size , int capacity , int number){
 using namespace std;
 int main() {
      int capacity = 50;
-    int array[capacity] = {1,2,4,5,6,8,9};
+    int array[50] = {1,2,4,5,6,8,9};
     int size = 7;
     
     insertelement(array, size, capacity , 7);
