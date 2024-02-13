@@ -25,6 +25,7 @@ int insertInsortedArray(int array[], int size, int capacity, int number)
     for (int i = 0; i < size; i++)
     {
         if (array[i] > number)
+            //  2,3,4,6,7,8 
         {
             pos = i;
             break; // Break the loop once the correct position is found
@@ -33,7 +34,10 @@ int insertInsortedArray(int array[], int size, int capacity, int number)
 
     for (int i = size; i > pos; i--)
     {
+        //  cout << "check " << i << endl;
         array[i] = array[i - 1];
+        // array[i + 1] = array[i];
+        // array[5] = array[4];
     }
 
     array[pos] = number;
@@ -45,12 +49,13 @@ int main()
     int capacity = 50;
     int array[50] = {2, 3, 4, 6, 7, 8};
     int size = 6;
-    insertInsortedArray(array, size + counter, capacity, 9);
-    insertInsortedArray(array, size + counter, capacity, 10);
-    insertInsortedArray(array, size + counter, capacity, 15);
-    insertInsortedArray(array, size + counter, capacity, 80);
-    insertInsortedArray(array, size + counter, capacity, 58);
-    insertInsortedArray(array, size + counter, capacity, 35);
+
+    insertInsortedArray(array, size + counter, capacity, -1);
+    // insertInsortedArray(array, size + counter, capacity, 10);
+    // insertInsortedArray(array, size + counter, capacity, 15);
+    // insertInsortedArray(array, size + counter, capacity, 80);
+    // insertInsortedArray(array, size + counter, capacity, 58);
+    // insertInsortedArray(array, size + counter, capacity, 35);
     size += 1;
     display(array, size + counter-1);
 
