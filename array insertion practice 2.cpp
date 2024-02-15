@@ -64,6 +64,10 @@ int main()
     cout << "array after deletion :" << endl;
     deleteElement(array , &size , 5);
     deleteElement(array , &size , 1);
+    deleteElement(array , &size , 8);
+    deleteElement(array , &size , 12);
+    deleteElement(array , &size , 9);
+    deleteElement(array , &size , 10);
 
     for (int i = 0; i < size; i++)
     {

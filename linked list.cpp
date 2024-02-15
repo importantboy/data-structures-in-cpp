@@ -1,37 +1,43 @@
 #include <iostream>
-
 using namespace std;
-
 class Node
 {
 public:
-    int key;
     int data;
     Node *next;
 
-    Node()
+    Node(int data)
     {
-        key = 0;
-        data = 0;
-        next = NULL;
-    }
-    Node(int k, int d)
-    {
-        key = k;
-        data = d;
+        this->data = data;
+        this->next = NULL;
     }
 };
-
-
-
- int main()
+void insertAtHead(Node *&head, int data)
 {
+    // create a node
 
-  Node* check = new Node(10, 10);
+    Node *temp = new Node(data);
+    temp->next = head;
+    head = temp;
+}
+void print(Node* &head)
+{
+    Node *temp = head;
+    while (temp != head)
+    {
+        cout << temp->data << " ";
+        temp = temp->next;
+    }
+    cout << endl;
+}
+int main()
+{
+    Node *node1 = new Node(12);
+    // head pointed to node 1
 
- cout << check->next << endl;
- cout << check->data << endl;
-   
-
+    Node *head = node1;
+     cout << head->data << endl;
+    insertAtHead(head, 15);
+    print(head);
     return 0;
 }
