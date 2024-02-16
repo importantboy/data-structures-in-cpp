@@ -7,9 +7,28 @@ class Node{
     public:
     int value;
     Node* next;
+     Node(){
+          this->next = NULL;
+     }
 };
+ void insertAthead(Node* &a , int data){
+      Node* temp = new Node();
+      temp->value = data;
+      temp->next = a;
+       a = temp;
+ }
 
-void printList(Node* n){
+ void inserInMiddle(Node* &head,int position ,int data){
+      int i = 0;
+       while (head != NULL)
+       {
+        head = head->next;
+        //  cout << i << endl;
+         i++;
+       }
+       
+ }
+void printList(Node* &n){
      Node* temp = new Node();
       temp = n;
      while(temp!= NULL){
@@ -17,6 +36,7 @@ void printList(Node* n){
             temp = temp -> next;
      }
 }
+
 int main() {
     // Write C++ code here
      Node* first = new Node();
@@ -31,6 +51,10 @@ int main() {
      third->value = 3;
      third->next = NULL;
      
+     insertAthead(first , 12);
+     insertAthead(first , 11);
+
+      inserInMiddle(first , 2 , 50);
      printList(first);
 return 0;
 }
