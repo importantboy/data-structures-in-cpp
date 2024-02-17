@@ -42,21 +42,11 @@ void insertAtLast(Node *&head, int data)
      // 4.insert newnode after the lastnode
      last->next = newnode;
 }
-// void insertAtmiddle(Node *&previousNode, int data)
-// {
-//      // 1.check if previous node is null
-//      if (previousNode == NULL)
-//      {
-//           cout << "cannot add after the last node" << endl;
-//           return;
-//      }
-//      // 2.prepare a newnode
-//      Node *newnode = new Node();
-//      newnode->value = data;
-//      // 3.insert newnode after previous
-//      newnode->next = previousNode->next;
-//      previousNode->next = newnode;
-// }
+
+void deletefirstNode(Node* &head){
+        head = head->next;
+}
+
 
 void nodeatmiddle(Node *&head, int position, int data)
 {
@@ -103,13 +93,9 @@ int main()
      third->next = NULL;
 
      insertAthead(first, 12);
-     insertAthead(first, 11);
-     insertAtLast(first, 4);
-     insertAtLast(first, 5);
-     insertAtLast(first, 6);
-
-     // insertAtmiddle(second, 80);
      nodeatmiddle(first, 2, 8);
+     deletefirstNode(first);
      printList(first);
+     cout << endl;
      return 0;
-}
+};
