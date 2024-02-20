@@ -36,7 +36,8 @@ public:
         this->head = initialnode;
         this->tail = initialnode;
     }
-    protected:
+
+protected:
     void insertAfter(int value)
     {
         Node *newnode = new Node(value);
@@ -44,7 +45,8 @@ public:
         newnode->prev = this->tail;
         this->tail = newnode;
     };
-    protected:
+
+protected:
     void insertBefore(int value)
     {
         Node *newnode = new Node(value);
@@ -52,7 +54,8 @@ public:
         newnode->next = this->head;
         this->head = newnode;
     };
-    public:
+
+public:
     void insertNode(int position, int value)
     {
         if (position == 1)
@@ -111,6 +114,17 @@ public:
             }
         }
     }
+    void getMiddle()
+    {
+        Node *temp = this->head;
+        int count = 0;
+        while (temp != nullptr)
+        {
+            temp = temp->next;
+            count++;
+        }
+        cout << count << endl;
+    }
     void Printlist()
     {
         Node *temp = this->head;
@@ -133,14 +147,23 @@ public:
 int main()
 {
     DoublyLinkedList list(1);
-   list.insertNode(2,2);
-   list.insertNode(3,3);
-   list.insertNode(4,11);
-   list.insertNode(5,31);
-   list.insertNode(6,90);
-   list.insertNode(7,87);
+    list.insertNode(2, 2);
+    list.insertNode(3, 3);
+    list.insertNode(4, 11);
+    list.insertNode(5, 31);
+    list.insertNode(6, 90);
+    list.insertNode(7, 87);
+    list.getMiddle();
     list.Printlist();
     cout << endl;
     cout << "the value of the head is :" << list.getHead()->value << endl;
     cout << "the value of the tail is :" << list.getTail()->value << endl;
+
+
+    DoublyLinkedList liner(0);
+    liner.insertNode(2,1);
+    liner.insertNode(3,2);
+    liner.insertNode(4,3);
+
+    liner.Printlist();
 };
