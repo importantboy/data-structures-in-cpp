@@ -65,11 +65,11 @@ int main()
 {
     Stack s(5);
 
-    // s.push(12);
-    // s.push(33);
-    // s.push(12);
-    // s.push(90);
-    // s.push(98);
+    s.push(12);
+    s.push(33);
+    s.push(12);
+    s.push(90);
+    s.push(98);
 
    s.pop();
    s.pop();
