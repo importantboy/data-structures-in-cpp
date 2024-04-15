@@ -2,16 +2,19 @@
 
 using namespace std;
 
+int sums = 0;
 int sum(int num, int count)
 {
     if (num == count)
     {
         return -1;
     }
-    count += num;
-    cout << count << endl;
-    return sum(num , count);
+    count++;
+    sums += count;
+    sum(num, count);
+    return sums;
 };
+
 int main()
 {
 
@@ -19,6 +22,6 @@ int main()
     int n;
     cin >> n;
 
-    sum(n, 1);
+    cout << sum(n, 0) << endl;
     return 0;
 }
