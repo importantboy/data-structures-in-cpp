@@ -22,6 +22,6 @@ int main()
     cout << "enter the number to find the factorial :";
     int n;
     cin >> n;
-    cout << factorial(n);
+    cout << factorial(n) << endl;
     return 0;
 }

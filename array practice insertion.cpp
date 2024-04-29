@@ -34,6 +34,6 @@ int main() {
     addelement(array, size , 30, 5);
     addelement(array, size , 80, 6);
      size+=1;
-      printarray(array , size);
+    printarray(array , size);
     return 0;
 }
